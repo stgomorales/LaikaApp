@@ -6,12 +6,12 @@ import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface IndicatorService {
+interface DogBreedService {
 
     @GET("breeds/list")
     suspend fun getDogBreads(): Response<List<DogBreed>>
 
     @GET("breed/{breed}/image")
-    suspend fun getIndicatorDetail(@Path("breed") breed :String) : Response<DogDetail>
+    suspend fun getDogDetail(@Path("breed") breed :String) : Response<DogDetail>
 
 }

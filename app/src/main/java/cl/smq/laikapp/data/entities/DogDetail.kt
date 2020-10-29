@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class DogDetail(
     @PrimaryKey(autoGenerate = true)
     val id: Long,
+    val breed: String,
     val dogImages: List<String>
 )
