@@ -1,7 +1,8 @@
-package cl.smq.laikapp
+package cl.smq.laikapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import cl.smq.laikapp.R
 import cl.smq.laikapp.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {
