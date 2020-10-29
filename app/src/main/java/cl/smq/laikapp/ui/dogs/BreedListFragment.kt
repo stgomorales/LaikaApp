@@ -1,32 +1,38 @@
 package cl.smq.laikapp.ui.dogs
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import cl.smq.laikapp.R
+import androidx.fragment.app.viewModels
+import cl.smq.laikapp.databinding.BreedListFragmentBinding
 
 class BreedListFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = BreedListFragment()
-    }
+    private lateinit var binding: BreedListFragmentBinding
+    private val viewModel: BreedListViewModel by viewModels()
 
-    private lateinit var viewModel: BreedListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.breed_list_fragment, container, false)
+        savedInstanceState: Bundle?): View? {
+        binding = BreedListFragmentBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(BreedListViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView()
+        setupObservers()
+    }
+
+    private fun setupRecyclerView(){
+
+    }
+
+    private fun setupObservers(){
+
     }
 
 }

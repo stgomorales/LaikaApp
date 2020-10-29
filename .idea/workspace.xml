@@ -10,19 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb07fe7-8f3e-446b-aca4-c9961442fafc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_astronaut.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/breed_detail_row.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/breed_list_fragment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/breed_row.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/navigation/navigation_graph.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/main/MainFragment.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/main/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/ui/dogs/BreedListViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,9 +148,9 @@
       <screen x="0" y="23" width="1680" height="988" />
     </state>
     <state x="604" y="302" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1680.988@0.23.1680.988" timestamp="1603930074744" />
-    <state x="428" y="279" key="AndroidCreateResourceFileDialog" timestamp="1603936495262">
+    <state x="428" y="279" key="AndroidCreateResourceFileDialog" timestamp="1603942698358">
       <screen x="0" y="23" width="1680" height="988" />
     </state>
-    <state x="428" y="279" key="AndroidCreateResourceFileDialog/0.23.1680.988@0.23.1680.988" timestamp="1603936495262" />
+    <state x="428" y="279" key="AndroidCreateResourceFileDialog/0.23.1680.988@0.23.1680.988" timestamp="1603942698358" />
   </component>
 </project>
