@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eb07fe7-8f3e-446b-aca4-c9961442fafc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/local/DogBreedDao.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/local/DogDetailDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/entities/DogDetail.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/entities/DogDetail.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/local/AppDatabase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/cl/smq/laikapp/data/local/AppDatabase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

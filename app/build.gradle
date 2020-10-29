@@ -29,6 +29,11 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", 'BASE_URL', "\"https://dog.ceo/api/\""
+
+        }
+        debug {
+            buildConfigField "String", 'BASE_URL', "\"https://dog.ceo/api/\""
         }
     }
     compileOptions {
