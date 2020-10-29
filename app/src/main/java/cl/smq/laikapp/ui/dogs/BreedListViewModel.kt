@@ -1,7 +1,7 @@
-package cl.smq.laikapp.ui.main
+package cl.smq.laikapp.ui.dogs
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
+class BreedListViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }
