@@ -8,15 +8,15 @@ class Converter {
     var gson = Gson()
 
     @TypeConverter
-    fun ListToString(serieItems: List<String>?): String? {
-        return if (serieItems.isNullOrEmpty())
+    fun dogImagesListToString(dogImages: List<String>?): String? {
+        return if (dogImages.isNullOrEmpty())
             null
         else
-            gson.toJson(serieItems)
+            gson.toJson(dogImages)
     }
 
     @TypeConverter
-    fun stringToList(data: String?): List<String>? {
+    fun stringToDogImagesList(data: String?): List<String>? {
         val listType = object : TypeToken<List<String>>() {
         }.type
         return if (data.isNullOrEmpty())
