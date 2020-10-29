@@ -9,5 +9,14 @@
         android:id="@+id/breedListFragment"
         android:name="cl.smq.laikapp.ui.dogs.BreedListFragment"
         android:label="breed_list_fragment"
-        tools:layout="@layout/breed_list_fragment" />
+        tools:layout="@layout/breed_list_fragment" >
+        <action
+            android:id="@+id/action_breedListFragment_to_dogDetailFragment"
+            app:destination="@id/dogDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogDetailFragment"
+        android:name="cl.smq.laikapp.ui.detail.DogDetailFragment"
+        android:label="dog_detail_fragment"
+        tools:layout="@layout/dog_detail_fragment" />
 </navigation>

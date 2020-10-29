@@ -6,10 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import cl.smq.laikapp.R
 import cl.smq.laikapp.data.entities.DogBreed
 import cl.smq.laikapp.databinding.BreedListFragmentBinding
 import cl.smq.laikapp.ui.adapter.BreedAdapter
@@ -61,7 +64,10 @@ class BreedListFragment : Fragment(), BreedAdapter.BreedItemListener {
     }
 
     override fun onClickedIndicator(breed: String) {
-        TODO("Not yet implemented")
+        findNavController().navigate(
+            R.id.action_breedListFragment_to_dogDetailFragment,
+            bundleOf("breed" to breed)
+        )
     }
 
 }
