@@ -1,6 +1,8 @@
 package cl.smq.laikapp.data.remote
 
-class DogBreedRemoteDataSource (
+import javax.inject.Inject
+
+class DogBreedRemoteDataSource @Inject constructor(
     private val dogBreedService: DogBreedService): RemoteDataSource(){
 
     suspend fun getallDogBreed() = getResult { dogBreedService.getDogBreads() }

@@ -4,8 +4,9 @@ import cl.smq.laikapp.data.local.DogBreedDao
 import cl.smq.laikapp.data.local.DogDetailDao
 import cl.smq.laikapp.data.remote.DogBreedRemoteDataSource
 import cl.smq.laikapp.utils.performGetOperation
+import javax.inject.Inject
 
-class DogRepository(
+class DogRepository @Inject constructor(
     private val remoteDataSource: DogBreedRemoteDataSource,
     private val localDogBreedDataSource: DogBreedDao,
     private val localDogDetailDataSource: DogDetailDao) {
