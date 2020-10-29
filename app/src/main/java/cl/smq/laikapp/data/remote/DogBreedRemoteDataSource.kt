@@ -6,5 +6,5 @@ class DogBreedRemoteDataSource @Inject constructor(
     private val dogBreedService: DogBreedService): RemoteDataSource(){
 
     suspend fun getallDogBreed() = getResult { dogBreedService.getDogBreads() }
-    suspend fun getdogDetail(breed :String) = getResult { dogBreedService.getDogDetail(breed) }
+    suspend fun getDogDetail(breed :String) = getResult { dogBreedService.getDogDetail(breed) }
 }

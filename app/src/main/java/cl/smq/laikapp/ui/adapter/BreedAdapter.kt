@@ -10,12 +10,12 @@ import cl.smq.laikapp.databinding.BreedRowBinding
 class BreedAdapter (private val listener: BreedItemListener): RecyclerView.Adapter<BreedViewHolder>(){
 
     interface BreedItemListener {
-        fun onClickedIndicator(breed: String)
+        fun onClickedItem(breed: String)
     }
 
-    private var items = ArrayList<DogBreed>()
+    private var items = ArrayList<String>()
 
-    fun setItems(items: ArrayList<DogBreed>){
+    fun setItems(items: ArrayList<String>){
         this.items.clear()
         this.items.addAll(items)
         notifyDataSetChanged()
@@ -36,19 +36,19 @@ class BreedAdapter (private val listener: BreedItemListener): RecyclerView.Adapt
 class BreedViewHolder(private val breedRowBinding: BreedRowBinding, private  val listener: BreedAdapter.BreedItemListener): RecyclerView.ViewHolder(breedRowBinding.root),
         View.OnClickListener{
 
-    private lateinit var breed: DogBreed
+    private lateinit var breed: String
 
     init {
         breedRowBinding.root.setOnClickListener(this)
     }
 
-    fun bind(item: DogBreed){
+    fun bind(item: String){
         this.breed = item
-        breedRowBinding.bredRowName.text = item.breed
+        breedRowBinding.bredRowName.text = item
 
     }
     override fun onClick(p0: View?) {
-        listener.onClickedIndicator(breed.breed)
+        listener.onClickedItem(breed)
     }
 
 }

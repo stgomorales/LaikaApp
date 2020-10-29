@@ -11,12 +11,8 @@ import cl.smq.laikapp.data.entities.DogBreed
 interface DogBreedDao {
 
 
-    @Query("SELECT * FROM DogBreed")
+    @Query("SELECT * FROM DogBreed LIMIT 1")
     fun getAllDogBreed() : LiveData<List<DogBreed>>
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(dogBreeds: List<DogBreed>)
-
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(dogBreed: DogBreed)

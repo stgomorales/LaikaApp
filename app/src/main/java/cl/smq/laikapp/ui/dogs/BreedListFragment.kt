@@ -17,7 +17,9 @@ import cl.smq.laikapp.data.entities.DogBreed
 import cl.smq.laikapp.databinding.BreedListFragmentBinding
 import cl.smq.laikapp.ui.adapter.BreedAdapter
 import cl.smq.laikapp.utils.Resource
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class BreedListFragment : Fragment(), BreedAdapter.BreedItemListener {
 
     private lateinit var binding: BreedListFragmentBinding
@@ -50,8 +52,10 @@ class BreedListFragment : Fragment(), BreedAdapter.BreedItemListener {
         viewModel.dogBreeds.observe(viewLifecycleOwner, Observer {
             when(it.status){
                 Resource.Status.onSuccess ->{
-                    adapter.setItems(it.data as ArrayList<DogBreed>)
-                    binding.listFragmentProgress.visibility = View.GONE
+                    if (!it.data.isNullOrEmpty()){
+                        adapter.setItems(it.data[0].breeds as ArrayList<String>)
+                        binding.listFragmentProgress.visibility = View.GONE
+                    }
                 }
                 Resource.Status.onError ->{
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
@@ -63,11 +67,10 @@ class BreedListFragment : Fragment(), BreedAdapter.BreedItemListener {
         })
     }
 
-    override fun onClickedIndicator(breed: String) {
+    override fun onClickedItem(breed: String) {
         findNavController().navigate(
             R.id.action_breedListFragment_to_dogDetailFragment,
             bundleOf("breed" to breed)
         )
     }
-
 }

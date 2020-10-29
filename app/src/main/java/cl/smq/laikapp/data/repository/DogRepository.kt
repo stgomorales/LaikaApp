@@ -14,12 +14,12 @@ class DogRepository @Inject constructor(
     fun getAllDogBreed() = performGetOperation(
         databaseQuery = {localDogBreedDataSource.getAllDogBreed()},
         networkCall = suspend { remoteDataSource.getallDogBreed()},
-        saveCallResult = {localDogBreedDataSource.insertAll(it)}
+        saveCallResult = {localDogBreedDataSource.insert(it)}
     )
 
     fun getDogDetail(breed: String) = performGetOperation(
-        databaseQuery = {localDogDetailDataSource.getAllDogDetail(breed)},
-        networkCall = suspend { remoteDataSource.getdogDetail(breed) },
-        saveCallResult = {localDogDetailDataSource.insert(it)}
+        networkCall = suspend { remoteDataSource.getDogDetail(breed) },
+        saveCallResult = {localDogDetailDataSource.insert(it)},
+        databaseQuery = {localDogDetailDataSource.getAllDogDetail(breed)}
     )
 }

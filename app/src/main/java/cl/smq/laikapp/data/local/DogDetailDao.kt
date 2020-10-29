@@ -10,7 +10,7 @@ import cl.smq.laikapp.data.entities.DogDetail
 @Dao
 interface DogDetailDao {
 
-    @Query("SELECT * FROM DogDetail WHERE breed = :breed limit 1")
+    @Query("SELECT * FROM DogDetail WHERE dogImages LIKE '%' ||  :breed || '%' limit 1")
     fun getAllDogDetail(breed: String) : LiveData<DogDetail>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

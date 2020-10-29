@@ -9,14 +9,14 @@ import cl.smq.laikapp.R
 import cl.smq.laikapp.databinding.BreedDetailRowBinding
 import com.bumptech.glide.Glide
 
-class DetailAdapter (private val listener: DetailItemListener, private val context: Context): RecyclerView.Adapter<DetailViewHolder>(){
+class DetailAdapter(private val listener: DetailItemListener, private val context: Context): RecyclerView.Adapter<DetailViewHolder>(){
 
 
     interface DetailItemListener {
         fun onClickedItem(url: String)
     }
 
-    private lateinit var items: ArrayList<String>
+    private var items = ArrayList<String>()
 
 
     fun setItems(items: ArrayList<String>){
@@ -33,11 +33,11 @@ class DetailAdapter (private val listener: DetailItemListener, private val conte
         return DetailViewHolder(binding, listener)
     }
 
-    override fun onBindViewHolder(holder: DetailViewHolder, position: Int) = holder.bind(items[position], context )
+    override fun onBindViewHolder(holder: DetailViewHolder, position: Int) = holder.bind(items[position], context)
 }
 
 
-class DetailViewHolder(private val detailRowBinding: BreedDetailRowBinding, private  val listener: DetailAdapter.DetailItemListener): RecyclerView.ViewHolder(detailRowBinding.root),
+class DetailViewHolder(private val detailRowBinding: BreedDetailRowBinding, private val listener: DetailAdapter.DetailItemListener): RecyclerView.ViewHolder(detailRowBinding.root),
     View.OnClickListener{
 
     private lateinit var dogUri: String
